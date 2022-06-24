@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+  }
+  
+  :root {
+    font-size: 16px;
+    --text-color: hsla(240, 9%, 89%, 1);
+    --menu-text-color: hsla(240, 7%, 78%, 1);
+    --button-color: hsla(0, 0%, 100%, 1);
+    --button-color-hover: rgba(1, 122, 178, 0.404);
+  }
+  
+  body {
+    background-image: url('/src/images/dark-universe-wallpaper-1177365030.jpg');
+    background-size: cover;
+  
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 1em;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  header nav.close {
+    display: none;
+  }
+  
+  header nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    position: fixed;
+    top: 3em;
+    right: 0.5em;
+  }
+  
+  header nav a {
+    color: var(--menu-text-color);
+    text-decoration: none;
+    text-align: end;
+  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.31rem;
+    line-height: 1.2rem;
+    transition:all 350ms ease-in-out;
+  
+    width: 8.5rem;
+    text-align: center;
+  
+  }
+  
+  header nav a:hover {
+    font-size: 1.5rem;
+    color: var(--button-color);
+    transition:all 350ms ease-in-out;
+  }
+  
+  .menu-btn,
+  .close-menu {
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu-btn.activeBtn,
+  .close-menu.activeBtn {
+    display: block;
+  }
+  
+  .home {
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  
+    margin-top: 14.5em;
+  }
+  
+  h1,
+  p {
+    color: var(--text-color);
+  }
+  
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  .home a {
+    align-items: center;
+    padding: 0.75em 2em;
+    border: 0.125em solid var(--button-color);
+    border-radius: 0.5em;
+  
+    font-weight: bold;
+    color: var(--button-color);
+    text-transform: uppercase;
+  
+    transition: all 350ms ease;
+  
+  }
+  
+  .home a:hover {
+    background-color: #FFFFFF;
+    color: #02799D;
+    transition: all 350ms ease;
+  }
+  
+  .universe,
+  .exploration {
+    width: min(648px, 99%);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  
+    margin-top: 8em;
+  }
+  
+  .home h1,
+  .universe h1,
+  .exploration h1 {
+    font-size: clamp(2em, 2em, 3em);
+  }
+  
+  .universe p,
+  .exploration p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 2em;
+  
+    text-align: center;
+  }
+  
+  .error {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 14.5rem;
+  }
+  
