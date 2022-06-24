@@ -152,3 +152,48 @@
     margin-top: 14.5rem;
   }
   
+  @media (min-width: 600px) {
+    .menu-btn.activeBtn,
+    .close-menu.activeBtn {
+      display: none;
+    }
+  
+    header {
+      justify-content: flex-start;
+      gap: 2em;
+      padding: 4.5em;
+      width: 100%;
+    }
+  
+    header nav.close {
+      display: flex;
+      flex-direction: row;
+      position: initial;
+      gap: 2em;
+    }
+  
+    header nav a:hover {
+      font-size: bold;
+      color: var(--button-color);
+      transition: font-weight 500ms ease-in-out;
+    }
+    
+    .universe,
+    .exploration {
+      align-items: flex-start;
+      margin-left: 4.5em;
+    }
+  
+    .home h1,
+    .universe h1,
+    .exploration h1 {
+      font-size: 3em;
+    }
+  
+    .universe p,
+    .exploration p {
+      text-align: left;
+      font-size: 1.125em;
+    }
+  }
+  
