@@ -1,5 +1,6 @@
 import { Router } from './router.js';
-import { menuBtn, closeMenuBtn, nav,button,links } from './elements.js';
+import { menuBtn, closeMenuBtn, nav,links } from './elements.js';
+import { HandleMenu } from './handleMobileMenu.js';
 
 const router = new Router();
 
@@ -17,8 +18,15 @@ links.forEach((link) => {
   });
 });
 
-button.addEventListener('click',()=>{
-  router.route()
-})
+
+const handlemenu = HandleMenu({ menuBtn, closeMenuBtn, nav });
+
+menuBtn.addEventListener('click', () => {
+  handlemenu.openMenu();
+});
+
+closeMenuBtn.addEventListener('click', () => {
+  handlemenu.closeMenu();
+});
 
 window.onpopstate = () => router.handle();
