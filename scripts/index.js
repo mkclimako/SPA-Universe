@@ -1,5 +1,5 @@
 import { Router } from './router.js';
-import { menuBtn, closeMenuBtn, nav,links } from './elements.js';
+import { menuBtn, closeMenuBtn, nav, links } from './elements.js';
 import { HandleMenu } from './handleMobileMenu.js';
 
 const router = new Router();
@@ -11,13 +11,11 @@ router.add(404, '/pages/404.html');
 
 router.handle();
 
-
 links.forEach((link) => {
   link.addEventListener('click', () => {
     router.route();
   });
 });
-
 
 const handlemenu = HandleMenu({ menuBtn, closeMenuBtn, nav });
 
