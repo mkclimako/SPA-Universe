@@ -150,7 +150,12 @@ h1 {
   margin-top: 14.5rem;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @media (min-width: 600px) {
+
   .menu-btn.activeBtn,
   .close-menu.activeBtn {
     display: none;
@@ -193,4 +198,123 @@ h1 {
     text-align: left;
     font-size: 1.125em;
   }
+}
+
+span {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 0.25rem;
+  height: 0.25rem;
+
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1),
+    0 0 0 0.5rem rgba(255, 255, 255, 0.1), 0 0 1.25rem rgba(255, 255, 255, 1);
+  animation: shooting-star 3s linear infinite;
+}
+
+span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-150%);
+  width: 18.75rem;
+  height: 0.0625rem;
+  background: linear-gradient(90deg, rgb(162, 236, 225), transparent);
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1500px);
+    opacity: 0;
+  }
+}
+
+span:nth-child(1) {
+  top: -10rem;
+  right: 0;
+  left: initial;
+
+  animation-delay: 0;
+  animation-duration: 1s;
+}
+
+span:nth-child(2) {
+  top: -10rem;
+  right: 5rem;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+}
+
+span:nth-child(3) {
+  top: -10rem;
+  right: 8rem;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+
+span:nth-child(4) {
+  top: -10rem;
+  right: 11.25rem;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 2.5s;
+}
+
+span:nth-child(5) {
+  top: -10rem;
+  right: 15rem;
+  left: 0;
+  animation-delay: 0.8s;
+  animation-duration: 2.5s;
+}
+
+span:nth-child(6) {
+  top: -10rem;
+  right: 25rem;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+span:nth-child(7) {
+  top: 18.75rem;
+  right: 0;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 2.75s;
+}
+
+span:nth-child(8) {
+  top: -10rem;
+  right: 43.75rem;
+  left: initial;
+  animation-delay: 1.4s;
+  animation-duration: 2.25s;
+}
+
+span:nth-child(9) {
+  top:-10rem;
+  right: 62.5rem;
+  left: initial;
+  animation-delay: 0.75s;
+  animation-duration: 2.25s;
+}
+
+span:nth-child(10) {
+  top: -10rem;
+  right: 62.5rem;
+  left: initial;
+  animation-delay: 2.75s;
+  animation-duration: 2.25s;
 }
