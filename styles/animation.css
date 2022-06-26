@@ -167,17 +167,4 @@ header .sun {
   
     }
   }
-
-  @keyframes shooting-star-tail {
-    0% {
-      background: linear-gradient(90deg, rgb(0, 255, 242), transparent);
-      opacity: 1;
-    }
-   
-    100% {
-      background: linear-gradient(90deg, rgb(6, 62, 59), transparent);
-
-      opacity: 0;
   
-    }
-  }
