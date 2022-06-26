@@ -116,6 +116,30 @@ header .sun {
     animation-delay: 2.75s;
     animation-duration: 2.25s;
   }
+
+  .shooting-star:nth-child(11) {
+    top: -10rem;
+    right: 22.5rem;
+    left: initial;
+    animation-delay: 1.75s;
+    animation-duration: 2.25s;
+  }
+
+  .shooting-star:nth-child(12) {
+    top: -10rem;
+    right: 32.5rem;
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.25s;
+  }
+  
+  .shooting-star:nth-child(13) {
+    top: -10rem;
+    right: 42.5rem;
+    left: initial;
+    animation-delay: 1.5s;
+    animation-duration: 2.25s;
+  }
   
 
 @keyframes sunrise {
