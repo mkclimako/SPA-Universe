@@ -6,10 +6,10 @@ header .sun {
     filter: blur(1.5px);
     border-radius: 50%;
     
-    background-color: #ffde00;
+    background-color: #ffffff;
     box-shadow: 0 0 0 2px #ffde0080, 0 0 0 4px #ffde0040, 0 0 0 6px #ffde0020,
       0 0 0 8px #ffde0010, 0 0 0 10px #ffde0000, 0 0 40px 10px #ffde0010;
-    animation: sunrise 1s infinite linear, rays 2s 2s infinite linear;
+    animation: rays 2s 2s infinite linear;
   }
   
 .shooting-star {
@@ -20,10 +20,7 @@ header .sun {
     width: 0.25rem;
     height: 0.25rem;
   
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1),
-      0 0 0 0.5rem rgba(255, 255, 255, 0.1), 0 0 1.25rem rgba(255, 255, 255, 1);
+    background: #ffffff;
     animation: shooting-star 3s linear infinite;
   }
   
@@ -31,10 +28,12 @@ header .sun {
     content: '';
     position: absolute;
     top: 50%;
+
     transform: translateY(-150%);
     width: 18.75rem;
     height: 0.0625rem;
-    background: linear-gradient(90deg, rgb(162, 236, 225), transparent);
+    
+    background: linear-gradient(90deg, rgb(126, 175, 172), transparent);
   }
   
   .shooting-star:nth-child(1) {
@@ -140,27 +139,15 @@ header .sun {
     animation-delay: 1.5s;
     animation-duration: 2.25s;
   }
-  
-
-@keyframes sunrise {
-    0% {
-      box-shadow: 0 0 0 2px #ffde0080, 0 0 0 4px #ffde0040, 0 0 0 6px #ffde0020,
-        0 0 0 8px #ffde0010, 0 0 0 10px #ffde0000, 0 0 40px 10px #ffde0010;
-      filter: blur(0);
-    }
-  }
-  
 
   @keyframes rays {
     0% {
       filter: blur(2px);
-  
       box-shadow: 0 0 0 0px #ffde0080, 0 0 0 5px #ffde0080, 0 0 0 10px #ffde0040,
         0 0 0 20px #ffde0020, 0 0 0 30px #ffde0010, 0 0 10px 40px #ffde0010;
     }
     100% {
       filter: blur(2px);
-  
       box-shadow: 0 0 0 5px #ffde0080, 0 0 0 10px #ffde0040, 0 0 0 20px #ffde0020,
         0 0 30px #ffde0010, 0 0 0 40px #ffde0000, 0 0 10px 40px #ffde0010;
     }
@@ -168,14 +155,29 @@ header .sun {
 
   @keyframes shooting-star {
     0% {
-      transform: rotate(315deg) translateX(0);
+      transform: rotate(320deg) translateX(0);
       opacity: 1;
     }
     70% {
       opacity: 1;
     }
     100% {
-      transform: rotate(315deg) translateX(-1500px);
+      transform: rotate(320deg) translateX(-1280px);
       opacity: 0;
+  
+    }
+  }
+
+  @keyframes shooting-star-tail {
+    0% {
+      background: linear-gradient(90deg, rgb(0, 255, 242), transparent);
+      opacity: 1;
+    }
+   
+    100% {
+      background: linear-gradient(90deg, rgb(6, 62, 59), transparent);
+
+      opacity: 0;
+  
     }
   }
