@@ -141,9 +141,9 @@ h1 {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1.5rem;
 
-  margin-top: 8em;
+  margin-top: 8rem;
 
   background-color: hsla(0, 0%, 0%, 0.168);
   backdrop-filter: blur(10px);
