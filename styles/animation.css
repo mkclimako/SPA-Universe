@@ -12,7 +12,7 @@
   animation: nebula 2s 750ms linear forwards;
 }
 
-@media (min-width: 600px) {  
+@media (min-width: 600px) {
   header .sun {
     width: 3.125rem;
     height: 3.125rem;
@@ -23,7 +23,7 @@
 
     background-color: #ffffff;
     box-shadow: 0 0 0 5px #ffde0080, 0 0 0 10px #ffde0040, 0 0 0 20px #ffde0020,
-    0 0 30px #ffde0010, 0 0 0 40px #ffde0000, 0 0 10px 40px #ffde0010;
+      0 0 30px #ffde0010, 0 0 0 40px #ffde0000, 0 0 10px 40px #ffde0010;
     animation: rays 2s 2s infinite linear;
   }
 
@@ -187,21 +187,24 @@
   0% {
     transform: scale(400%);
     opacity: 0;
+    transition: opacity 2s;
   }
 
   25% {
-    opacity: .5;
-    
+    transform: scale(300%);
+    opacity: 0.5;
+    transition: opacity 2s;
   }
-  
+
   50% {
-    opacity: .75;
-    
+    transform: scale(200%);
+    opacity: 0.75;
+    transition: opacity 2s;
   }
 
   100% {
     opacity: 1;
     transform: scale(100%);
-
+    transition: opacity 2s;
   }
 }
