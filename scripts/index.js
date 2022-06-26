@@ -14,6 +14,8 @@ router.handle();
 links.forEach((link) => {
   link.addEventListener('click', () => {
     router.route();
+  handlemenu.closeMenu();
+
   });
 });
 
@@ -26,5 +28,6 @@ menuBtn.addEventListener('click', () => {
 closeMenuBtn.addEventListener('click', () => {
   handlemenu.closeMenu();
 });
+
 
 window.onpopstate = () => router.handle();

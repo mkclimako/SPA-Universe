@@ -1,8 +1,8 @@
 export const HandleMenu = ({ menuBtn, closeMenuBtn, nav }) => {
   const openMenu = () => {
     menuBtn.classList.remove('activeBtn');
-    closeMenuBtn.classList.add('activeBtn');
     nav.classList.remove('close');
+    closeMenuBtn.classList.add('activeBtn');
   };
 
   const closeMenu = () => {
