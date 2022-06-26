@@ -22,8 +22,8 @@
     border-radius: 50%;
 
     background-color: #ffffff;
-    box-shadow: 0 0 0 2px #ffde0080, 0 0 0 4px #ffde0040, 0 0 0 6px #ffde0020,
-      0 0 0 8px #ffde0010, 0 0 0 10px #ffde0000, 0 0 40px 10px #ffde0010;
+    box-shadow: 0 0 0 5px #ffde0080, 0 0 0 10px #ffde0040, 0 0 0 20px #ffde0020,
+    0 0 30px #ffde0010, 0 0 0 40px #ffde0000, 0 0 10px 40px #ffde0010;
     animation: rays 2s 2s infinite linear;
   }
 
