@@ -47,10 +47,10 @@ header nav {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  
+
   position: fixed;
-  top: 3rem;
-  right: 0.5rem;
+  top: 4rem;
+  right: 0.2rem;
 }
 
 header nav.links a {
@@ -60,8 +60,9 @@ header nav.links a {
 
   font-style: normal;
   font-weight: 600;
-  font-size: 1.31rem;
-  line-height: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1rem;
+
   transition: all 350ms ease-in-out;
 
   width: 6.5rem;
@@ -69,11 +70,12 @@ header nav.links a {
 }
 
 header nav.links a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1) translateX(-1rem);
   font-weight: 700;
 
   color: var(--menu-text-color-hover);
   transition: all 350ms;
+
 }
 
 .menu-btn,
@@ -191,6 +193,7 @@ h1 {
 }
 
 @media (min-width: 600px) {
+
   header {
     justify-content: flex-start;
     gap: 2rem;
@@ -207,7 +210,6 @@ h1 {
     display: block;
     padding: 2rem;
     align-self: flex-start;
-
   }
 
   .mobileIcon {
@@ -221,10 +223,16 @@ h1 {
     gap: 2rem;
   }
 
-  header nav a:hover {
+  header nav.links a {
+    transition: all 350ms ;
+
+  }
+
+  header nav.links a:hover {
     font-size: bold;
-    color: var(--button-color);
-    transition: font-weight 500ms ease-in-out;
+    color: var(--menu-text-color-hover);
+    transition: all 350ms;
+    transform: scale(1.2);
   }
 
   .home h1,
