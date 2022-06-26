@@ -41,7 +41,7 @@ header {
 
 header nav.close {
   display: none;
-}
+  }
 
 header nav {
   display: flex;
@@ -50,8 +50,11 @@ header nav {
 
   position: fixed;
   top: 4rem;
-  right: 0.2rem;
+  right: 0.5rem;
 }
+
+
+
 
 header nav.links a {
   color: var(--menu-text-color);
@@ -65,7 +68,7 @@ header nav.links a {
 
   transition: all 350ms ease-in-out;
 
-  text-align: center;
+  text-align: right;
 }
 
 header nav.links a:hover {
@@ -205,6 +208,9 @@ h1 {
 
   header nav.close {
     display: flex;
+    }
+
+  header nav {
     flex-direction: row;
     position: initial;
     gap: 2rem;
