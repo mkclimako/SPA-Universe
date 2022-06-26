@@ -9,14 +9,17 @@
 
 :root {
   font-size: 16px;
-  --text-color: hsla(240, 9%, 89%, 1);
-  --menu-text-color: hsla(240, 7%, 78%, 1);
+  --text-color: hsl(0, 0%, 100%);
+  --menu-text-color: hsl(0, 0%, 100%);
+  --menu-text-color-hover: hsl(55, 100%, 50%);
+
   --button-color: hsla(0, 0%, 100%, 1);
-  --button-color-hover: rgba(1, 122, 178, 0.404);
+  --button-color-hover: hsl(0, 0%, 100%);
+  --button-text-color-hover: hsl(163, 100%, 15%);
 }
 
 body {
-  background-image: url('/src/images/dark-universe-wallpaper-1177365030.jpg');
+  background-image: url('/src/images/background.jpg');
   background-size: cover;
 
   width: 100%;
@@ -32,6 +35,10 @@ header {
   width: 100%;
 }
 
+.sun.invisible {
+  display: none;
+}
+
 header nav.close {
   display: none;
 }
@@ -39,31 +46,34 @@ header nav.close {
 header nav {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 1rem;
+  
   position: fixed;
-  top: 3em;
-  right: 0.5em;
+  top: 3rem;
+  right: 0.5rem;
 }
 
-header nav a {
+header nav.links a {
   color: var(--menu-text-color);
   text-decoration: none;
   text-align: end;
 
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.31rem;
   line-height: 1.2rem;
   transition: all 350ms ease-in-out;
 
-  width: 8.5rem;
+  width: 6.5rem;
   text-align: center;
 }
 
-header nav a:hover {
-  font-size: 1.5rem;
-  color: var(--button-color);
-  transition: all 350ms ease-in-out;
+header nav.links a:hover {
+  transform: scale(1.2);
+  font-weight: 700;
+
+  color: var(--menu-text-color-hover);
+  transition: all 350ms;
 }
 
 .menu-btn,
@@ -75,6 +85,12 @@ header nav a:hover {
 .menu-btn.activeBtn,
 .close-menu.activeBtn {
   display: block;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home {
@@ -108,13 +124,13 @@ h1 {
   color: var(--button-color);
   text-transform: uppercase;
 
-  transition: all 350ms ease;
+  transition: all 350ms;
 }
 
 .home a:hover {
-  background-color: #ffffff;
-  color: #02799d;
-  transition: all 350ms ease;
+  background-color: var(--button-color-hover);
+  color: var(--button-text-color-hover);
+  transition: all 350ms;
 }
 
 .universe,
@@ -126,12 +142,19 @@ h1 {
   gap: 1.5em;
 
   margin-top: 8em;
+
+  background-color: hsla(0, 0%, 0%, 0.168);
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 0.5rem;
+
+  padding: 1rem;
 }
 
 .home h1,
 .universe h1,
 .exploration h1 {
-  font-size: clamp(2em, 2em, 3em);
+  font-size: 2rem;
 }
 
 .universe p,
@@ -150,41 +173,58 @@ h1 {
   margin-top: 14.5rem;
 }
 
+.nebula {
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-image: url('/src/images/nebula.png');
+  transform: rotate(180deg);
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
 
 @media (min-width: 600px) {
+  header {
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 4.5rem;
+    width: 100%;
+  }
 
   .menu-btn.activeBtn,
   .close-menu.activeBtn {
     display: none;
   }
 
-  header {
-    justify-content: flex-start;
-    gap: 2em;
-    padding: 4.5em;
-    width: 100%;
+  .sun.invisible {
+    display: block;
+    padding: 2rem;
+    align-self: flex-start;
+
+  }
+
+  .mobileIcon {
+    display: none;
   }
 
   header nav.close {
     display: flex;
     flex-direction: row;
     position: initial;
-    gap: 2em;
+    gap: 2rem;
   }
 
   header nav a:hover {
     font-size: bold;
     color: var(--button-color);
     transition: font-weight 500ms ease-in-out;
-  }
-
-  .universe,
-  .exploration {
-    align-items: flex-start;
-    margin-left: 4.5em;
   }
 
   .home h1,
@@ -195,126 +235,7 @@ h1 {
 
   .universe p,
   .exploration p {
-    text-align: left;
+    text-align: center;
     font-size: 1.125em;
   }
-}
-
-span {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-  width: 0.25rem;
-  height: 0.25rem;
-
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1),
-    0 0 0 0.5rem rgba(255, 255, 255, 0.1), 0 0 1.25rem rgba(255, 255, 255, 1);
-  animation: shooting-star 3s linear infinite;
-}
-
-span::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-150%);
-  width: 18.75rem;
-  height: 0.0625rem;
-  background: linear-gradient(90deg, rgb(162, 236, 225), transparent);
-}
-
-@keyframes shooting-star {
-  0% {
-    transform: rotate(315deg) translateX(0);
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(315deg) translateX(-1500px);
-    opacity: 0;
-  }
-}
-
-span:nth-child(1) {
-  top: -10rem;
-  right: 0;
-  left: initial;
-
-  animation-delay: 0;
-  animation-duration: 1s;
-}
-
-span:nth-child(2) {
-  top: -10rem;
-  right: 5rem;
-  left: initial;
-  animation-delay: 0.2s;
-  animation-duration: 3s;
-}
-
-span:nth-child(3) {
-  top: -10rem;
-  right: 8rem;
-  left: initial;
-  animation-delay: 0.4s;
-  animation-duration: 2s;
-}
-
-span:nth-child(4) {
-  top: -10rem;
-  right: 11.25rem;
-  left: initial;
-  animation-delay: 0.6s;
-  animation-duration: 2.5s;
-}
-
-span:nth-child(5) {
-  top: -10rem;
-  right: 15rem;
-  left: 0;
-  animation-delay: 0.8s;
-  animation-duration: 2.5s;
-}
-
-span:nth-child(6) {
-  top: -10rem;
-  right: 25rem;
-  left: initial;
-  animation-delay: 1s;
-  animation-duration: 3s;
-}
-span:nth-child(7) {
-  top: 18.75rem;
-  right: 0;
-  left: initial;
-  animation-delay: 1s;
-  animation-duration: 2.75s;
-}
-
-span:nth-child(8) {
-  top: -10rem;
-  right: 43.75rem;
-  left: initial;
-  animation-delay: 1.4s;
-  animation-duration: 2.25s;
-}
-
-span:nth-child(9) {
-  top:-10rem;
-  right: 62.5rem;
-  left: initial;
-  animation-delay: 0.75s;
-  animation-duration: 2.25s;
-}
-
-span:nth-child(10) {
-  top: -10rem;
-  right: 62.5rem;
-  left: initial;
-  animation-delay: 2.75s;
-  animation-duration: 2.25s;
 }

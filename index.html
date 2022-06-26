@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -10,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPA Universe</title>
     <link rel="stylesheet" href="/styles/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles/animation.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -19,31 +17,33 @@
   </head>
   <body>
     <header>
-      <img src="src/images/Vector.svg" alt="" />
-      <nav class="close">
+      <div class="sun invisible"></div>
+       <img src="src/images/mobileIcon.svg" class="mobileIcon"alt="">
+      <nav class="close links">
         <a href="/">Home</a>
         <a href="/universe">O Universo</a>
         <a href="/exploration">Exploração</a>
       </nav>
-      <img src="src/images/menu btn.svg" alt="" class="menu-btn activeBtn" />
+      <img src="src/images/openMenu.svg" alt="" class="menu-btn activeBtn" />
       <img
-        src="src/images/MaterialSymbolsClose.svg"
+        src="src/images/closeMenu.svg"
         alt=""
         class="close-menu"
       />
     </header>
     <section id="app"></section>
-    <section class="shooting-star">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <section>
+      <div class="nebula"></div>
+      <span class="shooting-star"></span>
+      <span class="shooting-star"></span>
+      <span class="shooting-star"></span>
+      <span class="shooting-star"></span>
+      <span class="shooting-star"></span>
+      <span class="shooting-star"></span>
+      <span class="shooting-star"></span>
+      <span class="shooting-star"></span>
+      <span class="shooting-star"></span>
+      <span class="shooting-star"></span>
     </section>
     <script src="scripts/index.js" type="module"></script>
   </body>
