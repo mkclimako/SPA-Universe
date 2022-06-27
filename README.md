@@ -25,17 +25,10 @@
  <img src=" https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
 </section>
 <hr>
-
 <h2 id="screenshot">Demonstração</h2>
-<h3>Versão mobile</h3>
- <img src="https://github.com/mkclimako/README-files/blob/main/SPA-universe/mobile.png">
-   &nbsp;
- <img src="https://github.com/mkclimako/README-files/blob/main/SPA-universe/tablet.png">
- &nbsp;
-<h3>Versão desktop</h3>
-   &nbsp;
- <img src="https://github.com/mkclimako/README-files/blob/main/SPA-universe/desktop.png">
+ <img src="https://github.com/mkclimako/README-files/blob/main/SPA-universe/mobile%20version.png">
+ <img src="https://github.com/mkclimako/README-files/blob/main/SPA-universe/desktop%20version.png">
 <hr>
 
 <h2 id="deploy">Deploy</h2>
-<a href="https://focus-timer-3.vercel.app/" target="_blank">Link da aplicação na Vercel</a> 
+<a href="https://spa-universe-ten.vercel.app/" target="_blank">Link da aplicação na Vercel</a> 
