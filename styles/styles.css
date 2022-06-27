@@ -183,9 +183,7 @@ h1 {
 }
 
 
-.astronaut {
-display: none;
-}
+
 ::-webkit-scrollbar {
   display: none;
 }

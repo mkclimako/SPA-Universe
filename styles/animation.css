@@ -12,6 +12,10 @@
   animation: nebula 2s 750ms linear forwards;
 }
 
+.astronaut {
+  display: none;
+  }
+
 @media (min-width: 600px) {
   header .sun {
     width: 3.125rem;
