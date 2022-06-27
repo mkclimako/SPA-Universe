@@ -154,6 +154,15 @@
     animation-delay: 1.5s;
     animation-duration: 2.25s;
   }
+
+  .astronaut {
+    display: block;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    animation: astronaut 5s linear infinite ;
+  }
+
 }
 
 @keyframes rays {
@@ -207,4 +216,19 @@
     transform: scale(100%);
     transition: opacity 2s;
   }
+}
+
+@keyframes astronaut {
+  0%{
+    transform: rotate(0deg) translate(7px,1px);
+  }
+
+  50%{
+    transform: rotate(180deg) translate(28px,3px);
+
+  }
+  100% {
+    transform: rotate(360deg) translate(7px,1px);
+
+}
 }
