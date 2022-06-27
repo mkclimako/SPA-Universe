@@ -41,7 +41,7 @@ header {
 
 header nav.close {
   display: none;
-  }
+}
 
 header nav {
   display: flex;
@@ -51,10 +51,8 @@ header nav {
   position: fixed;
   top: 4rem;
   right: 0.5rem;
+  z-index: 2;
 }
-
-
-
 
 header nav.links a {
   color: var(--menu-text-color);
@@ -77,7 +75,6 @@ header nav.links a:hover {
 
   color: var(--menu-text-color-hover);
   transition: all 350ms;
-
 }
 
 .menu-btn,
@@ -95,17 +92,8 @@ header nav.links a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  margin-top: 2rem;
 
-.home {
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5em;
-
-  margin-top: 14.5em;
 }
 
 h1,
@@ -116,6 +104,18 @@ p {
 h1 {
   font-style: normal;
   font-weight: 700;
+}
+
+.home {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+
+  margin-top: 8rem;
+
 }
 
 .home a {
@@ -137,38 +137,43 @@ h1 {
   transition: all 350ms;
 }
 
-.universe,
-.exploration {
+.container {
   width: min(648px, 99%);
   align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+}
+
+.content {
+  width: min(648px, 99%);
+  align-items: left;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
-  margin-top: 8rem;
+  padding: 3rem 1rem;
 
   background-color: hsla(0, 0%, 0%, 0.168);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 0.5rem;
-
-  padding: 1rem;
 }
 
 .home h1,
-.universe h1,
-.exploration h1 {
+.content h1 {
   font-size: 2rem;
+  text-align: left;
 }
 
-.universe p,
-.exploration p {
-  font-style: normal;
+.content p {
   font-weight: 400;
   font-size: 1em;
   line-height: 2em;
 
-  text-align: center;
+  text-align: left;
 }
 
 .error {
@@ -177,16 +182,14 @@ h1 {
   margin-top: 14.5rem;
 }
 
-
 ::-webkit-scrollbar {
   display: none;
 }
 
 @media (min-width: 600px) {
-
   header {
     justify-content: flex-start;
-    gap:2.5rem;
+    gap: 2.5rem;
     padding: 4.5rem;
     width: 100%;
   }
@@ -208,7 +211,7 @@ h1 {
 
   header nav.close {
     display: flex;
-    }
+  }
 
   header nav {
     flex-direction: row;
@@ -217,8 +220,7 @@ h1 {
   }
 
   header nav.links a {
-    transition: all 350ms ;
-
+    transition: all 350ms;
   }
 
   header nav.links a:hover {
@@ -228,16 +230,25 @@ h1 {
     transform: scale(1.2);
   }
 
+  #app {
+
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    align-items: center;
+  }
+
   .home h1,
-  .universe h1,
-  .exploration h1 {
+  .content h1 {
     font-size: 3em;
   }
 
-  .universe p,
-  .exploration p {
+  .content p {
     text-align: center;
     font-size: 1.125em;
   }
-
 }
